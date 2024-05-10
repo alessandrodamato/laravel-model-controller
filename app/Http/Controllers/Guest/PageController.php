@@ -20,7 +20,7 @@ class PageController extends Controller
 
         $movies = Movie::where('vote', '>', $vote)->get();
 
-        $title = 'Filtro per voto';
+        $title = 'Filtro per voto' . ' - ' . 'Maggiore di' . ' ' . $vote ;
 
         return view('home', compact('movies', 'title'));
     }
