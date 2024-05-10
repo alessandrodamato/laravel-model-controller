@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1 class="text-center mt-3 mb-5">Dettagli film</h1>
+<h1 class="text-center mb-5">Dettagli film</h1>
 
 <div class="container text-center">
 
