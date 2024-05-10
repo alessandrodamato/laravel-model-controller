@@ -4,8 +4,6 @@
 
 <h1 class="text-center mt-3 mb-5">Home - {{ $title }}</h1>
 
-<h2></h2>
-
 <div class="container">
     <div class="row row-cols-1 row-cols-md-3  row-cols-xl-4">
 
@@ -18,6 +16,7 @@
                     @if ($movie->title !== $movie->original_title)
                         <h6>{{$movie->original_title}}</h6>
                     @endif
+                    <a href="{{route('details', $movie->id)}}" class="text-white">Vai a dettagli</a>
                 </div>
                 <ul class="list-group list-group-flush border-white">
                     <li class="list-group-item bg-dark text-white border-white text-capitalize"><strong>Lingua:</strong> {{$movie->nationality}}</li>
