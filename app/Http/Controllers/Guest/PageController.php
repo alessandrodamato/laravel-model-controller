@@ -16,7 +16,12 @@ class PageController extends Controller
         return view('home', compact('movies', 'title'));
     }
 
-    public function nuovaPagina(){
-        return view('nuova-pagina');
+    public function moviesByVote($vote){
+
+        $movies = Movie::where('vote', '>', $vote)->get();
+
+        $title = 'Filtro per voto';
+
+        return view('home', compact('movies', 'title'));
     }
 }
