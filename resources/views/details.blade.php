@@ -8,6 +8,7 @@
 
     <ul class="list-group list-group-flush border-white">
         <li class="list-group-item bg-dark text-white border-white"><h3>{{$movie->title}}</h3></li>
+        {{-- stampo il titolo originale solo se diverso da quello base --}}
         @if ($movie->title !== $movie->original_title)
             <li class="list-group-item bg-dark text-white border-white">
                 <h4>{{$movie->original_title}}</h4>
